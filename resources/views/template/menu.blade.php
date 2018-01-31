@@ -1,14 +1,14 @@
 <div class="menuTemplate">
   <div class="links">
-      <a href="../index">Home</a>
-      <a href="../machineACafe">Machine à Café</a>
-      <a href="../boissons/lister-boissons">Liste des Boissons</a>
-      <a href="../boissons/lister-boissons-trinom">Ordre par nom</a>
-      <a href="../boissons/lister-boissons-triprix">Ordre par prix</a>
-      <a href="../recettes">Liste des Recettes</a>
-      <a href="../ingredients">Liste des Ingrédients</a>
-      <a href="../ventes">Liste des Ventes</a>
-      <a href="../gestionMonnaie">Gestion Monnaie</a>
+      <a href="../">Home</a>
+      <a href="{{ url('/machineACafe')}}">Machine à Café</a>
+      <a href="{{ url('/boissons/lister-boissons')}}">Liste des Boissons</a>
+      <a href="{{ url('/boissons/lister-boissons-trinom')}}">Ordre par nom</a>
+      <a href="{{ url('/boissons/lister-boissons-triprix')}}">Ordre par prix</a>
+      <a href="{{ url('/recettes')}}">Liste des Recettes</a>
+      <a href="{{ url('/ingredients')}}">Liste des Ingrédients</a>
+      <a href="{{ url('/ventes')}}">Liste des Ventes</a>
+      <a href="{{ url('/gestionMonnaie')}}">Gestion Monnaie</a>
   </div>
 </div>
 {{--  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top">
