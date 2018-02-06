@@ -23,7 +23,7 @@ class machineACafeController extends Controller
         // Méthode d'appel à la BDD sans ORM
         // $drink = DB::select("select nomboisson, prixboisson from boisson where codeboisson = ?", [$code]);
         // Méthode d'appel à la BDD avec ORM
-        $drink = Boisson::where('codeboisson', $code);
+        $drink = Boisson::where('codeboisson',[$code])->get();
 
         return view('boisson.drinkDetails', ['details' => $drink]);
         

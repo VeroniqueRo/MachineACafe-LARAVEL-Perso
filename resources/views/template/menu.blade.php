@@ -2,9 +2,7 @@
   <div class="links">
       <a href="../">Home</a>
       <a href="{{ url('/machineACafe')}}">Machine à Café</a>
-      <a href="{{ url('/boissons/lister-boissons')}}">Liste des Boissons</a>
-      <a href="{{ url('/boissons/lister-boissons-trinom')}}">Ordre par nom</a>
-      <a href="{{ url('/boissons/lister-boissons-triprix')}}">Ordre par prix</a>
+      <a href="{{ url('/boissons/liste_des_boissons')}}">Liste des Boissons</a>
       <a href="{{ url('/recettes')}}">Liste des Recettes</a>
       <a href="{{ url('/ingredients')}}">Liste des Ingrédients</a>
       <a href="{{ url('/ventes')}}">Liste des Ventes</a>

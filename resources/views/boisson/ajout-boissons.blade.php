@@ -1,43 +1,35 @@
 @extends('template.template')
 
 @section('titre')
-  Ajouter une nouvelle boisson
+  Ajouter une boisson
 @endsection
 
 @section('content')
-  <div class = "container">
-  <div class="tableauBoisson ">
-    <table class = "table table-hover table-bordered">
-      <thead>
-        <tr class="active">
-            @foreach ($drinks as $drinkName)
-            {{--  <td><a href="/boisson/{{$drinkName->codeboisson}}">{{ $drinkName->nomboisson}} </a></td>  --}}
-            <td>{{ $drinkName->nomboisson}}</td>
-            @endforeach
-        </tr>
-      </thead>
-    </table>
-  </div>
-  <div>
-      @include('template.form-boissons')
-  </div>
-    {{--  <div class="choixBoisson">
-      <h1>Faites votre choix !</h1>
-      <form method="post" action="/boisson/{{$drinkName->codeboisson}}">
-        <select name="choixBoisson">
-          @foreach ($drinks as $drinkName)
-            <option><a href="/boisson/{{$drinkName->codeboisson}}">{{ $drinkName->nomboisson}} </a></option>
-          @endforeach
-        </select>
-        <select name="choixSucre" placeholder="Combien de sucres ?"/>
-          <option>Combien de sucres?</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        <input type="submit" value="Valider"/>
+
+  <div class="container">
+      <form class="" action="/boissons/liste_des_boissons" method="post">
+          {{ csrf_field() }}
+          <div class="form-group">
+            <label for="codeboisson">Code</label>
+            <input type="text" class="form-control" name="codeboisson" placeholder="entrer le nom de la boisson">
+          </div>
+          <div class="form-group">
+              <label for="nomboisson">Nom de la Boisson</label>
+              <input type="text" class="form-control" name="nomboisson" placeholder="entrer le nom de la boisson">
+          </div>
+          <div class="form-group">
+              <label for="prixboisson" name="prixboisson">Prix</label>
+              {{-- <select class="form-control" name="prixboisson">
+                <option value="40">40</option>
+                <option value="50">50</option>
+                <option value="60">60</option>
+                <option value="70">70</option>
+                <option value="80">80</option>
+              </select> --}}
+              <input type="text" class="form-control" name="prixboisson" placeholder="entrer le prix de la boisson">
+          </div>
+          <button type="submit" class="btn btn-primary">Ajouter à la BDD</button>
       </form>
-    </div>  --}}
   </div>
+
 @endsection

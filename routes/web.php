@@ -15,30 +15,24 @@ Route::get('/', 'IndexController@bienvenue');
 
 Route::get('/machineACafe','MachineACafeController@listDrink');
 
+Route::get('/boisson/ajouter-boisson','BoissonController@create');// Formulaire de création d'une boisson
+
+Route::post('/boissons/liste_des_boissons','BoissonController@store');
+
 Route::get('/ingredients','IngredientController@listIngredients');
 
 Route::get('/ventes','VenteController@listeVente');
 
 Route::get('/recettes','RecetteController@listRecettes');
 
-Route::get('/gestionMonnaie','GestionMonnaieController@listMonnaie');
+Route::get('/gestion','GestionMonnaieController@listMonnaie');
 
-Route::get('/boissons/lister-boissons','BoissonController@afficheBoissons');
+Route::get('/boissons/liste_des_boissons','BoissonController@afficheBoissons')->name('test');
 
-Route::get('/boissons/lister-boissons-trinom','BoissonController@triNomBoissons');
+Route::get('/boissons/lister_et_trier_nom','BoissonController@triNomBoissons');
 
-Route::get('/boissons/lister-boissons-triprix','BoissonController@triPrixBoissons');
-
-Route::get('/boissons/show','BoissonController@triPrixBoissons');
+Route::get('/boissons/lister_et_trier_prix','BoissonController@triPrixBoissons');
 
 Route::get('/boisson/{code}','MachineACafeController@showDrink');// Méthode sans ORM
-
-
-// Route::get('/boisson-ORM/{id}','BoissonController@showBoisson');
-
-// Route::controllers([
-//     'auth'=> 'Auth\AuthController',
-//     'password' => 'Auth\PasswordController',
-// ]);
 
 ?>
